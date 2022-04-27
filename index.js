@@ -185,6 +185,9 @@ class Car {
 // }
 
 async function isEvenNumberAsync(number) {
+  if (typeof number !== "number" || isNaN(number)) {
+    throw new Error("number must be a number");
+  }
   return number % 2 === 0 || false;
 }
 
